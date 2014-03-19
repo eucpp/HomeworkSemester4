@@ -2,8 +2,6 @@
 
 data Operator = Plus | Minus
 
-data Monom' = Monom' Int Int
-
 data Polynom = Monom Int Int | Polynom Polynom Operator Polynom
 
 instance Show Operator where
