@@ -1,4 +1,4 @@
--- GUI приложение для вычисление производной полинома
+-- Пример GUI приложения
 
 import Data.Char
 import Data.List
@@ -7,11 +7,6 @@ import Control.Monad.IO.Class
 import Graphics.UI.Gtk
 import Graphics.UI.Gtk.Glade
 
-updateDeriv :: Entry -> Entry -> IO ()
-updateDeriv expr_edit deriv_edit  = 
-    entryGetText expr_edit >>=
-    \str -> entrySetText deriv_edit str
-    
 format_word :: String -> String
 format_word []  = []
 format_word str = (\(x:xs) -> (toUpper x):xs) . map toLower $ str
